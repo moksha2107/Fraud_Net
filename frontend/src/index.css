@@ -1,0 +1,90 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #05080f;
+  --bg-card:    #0a0f1a;
+  --bg-card2:   #0e1420;
+  --bg-hover:   #141c2b;
+  --border:     #1e2a3a;
+  --border-bright: #2d3f56;
+  --green:      #00ff88;
+  --green-dim:  #00cc6a;
+  --green-glow: rgba(0,255,136,0.12);
+  --red:        #ff3d5a;
+  --red-glow:   rgba(255,61,90,0.12);
+  --yellow:     #ffcc00;
+  --blue:       #4fc3f7;
+  --purple:     #a78bfa;
+  --orange:     #ff8c00;
+  --text:       #e2eaf6;
+  --text-muted: #6b7fa3;
+  --text-dim:   #3d5068;
+  --font-mono:  'JetBrains Mono', monospace;
+  --font-sans:  'Inter', sans-serif;
+  --radius:     10px;
+  --radius-sm:  6px;
+  --radius-lg:  14px;
+  --shadow:     0 8px 32px rgba(0,0,0,0.7);
+  --shadow-sm:  0 2px 12px rgba(0,0,0,0.5);
+  --glow-green: 0 0 20px rgba(0,255,136,0.25);
+  --glow-red:   0 0 20px rgba(255,61,90,0.25);
+  --glow-blue:  0 0 20px rgba(79,195,247,0.25);
+  --transition: 0.18s ease;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Page fade-in */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#root > * { animation: pageFadeIn 0.35s ease both; }
+
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button { cursor: pointer; font-family: var(--font-sans); }
+
+input, select, textarea {
+  font-family: var(--font-mono);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 9px 13px;
+  width: 100%;
+  font-size: 12px;
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(0,255,136,0.1);
+  background: rgba(0,255,136,0.02);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-bright);
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+
+/* Selection */
+::selection {
+  background: rgba(0,255,136,0.2);
+  color: var(--green);
+}

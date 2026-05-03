@@ -1,0 +1,50 @@
+# === SECRETS — NEVER COMMIT ===
+backend/.env
+
+# === DATASET (144 MB — too large for GitHub) ===
+backend/data/creditcard.csv
+
+# === DATABASE (contains real user data) ===
+backend/fraudnet.db
+
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.mypy_cache/
+
+# === VIRTUAL ENVIRONMENTS ===
+venv/
+env/
+.venv/
+.env/
+
+# === CATBOOST TRAINING ARTIFACTS ===
+backend/catboost_info/
+
+# === NODE / FRONTEND ===
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# === OS FILES ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === IDE / EDITOR ===
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+frontend/.claude/

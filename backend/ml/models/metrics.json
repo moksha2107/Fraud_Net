@@ -1,0 +1,54 @@
+[
+  {
+    "name": "XGBoost",
+    "accuracy": 0.9988,
+    "precision": 0.6143,
+    "recall": 0.8776,
+    "f1": 0.7227,
+    "roc_auc": 0.9801,
+    "pr_auc": 0.848,
+    "cost_sensitive_loss": 6270,
+    "true_positives": 86,
+    "false_negatives": 12,
+    "false_positives": 54
+  },
+  {
+    "name": "LightGBM",
+    "accuracy": 0.9989,
+    "precision": 0.6439,
+    "recall": 0.8673,
+    "f1": 0.7391,
+    "roc_auc": 0.9739,
+    "pr_auc": 0.8484,
+    "cost_sensitive_loss": 6735,
+    "true_positives": 85,
+    "false_negatives": 13,
+    "false_positives": 47
+  },
+  {
+    "name": "CatBoost",
+    "accuracy": 0.9987,
+    "precision": 0.58,
+    "recall": 0.8878,
+    "f1": 0.7016,
+    "roc_auc": 0.972,
+    "pr_auc": 0.833,
+    "cost_sensitive_loss": 5815,
+    "true_positives": 87,
+    "false_negatives": 11,
+    "false_positives": 63
+  },
+  {
+    "name": "StackingEnsemble",
+    "accuracy": 0.9991,
+    "precision": 0.6744,
+    "recall": 0.8878,
+    "f1": 0.7665,
+    "roc_auc": 0.976,
+    "pr_auc": 0.8499,
+    "cost_sensitive_loss": 5710,
+    "true_positives": 87,
+    "false_negatives": 11,
+    "false_positives": 42
+  }
+]
